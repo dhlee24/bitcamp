@@ -4,7 +4,7 @@ package bitcamp.java106.pms.util;
 import java.util.Scanner;
 
 public class Console {
-    // 이 클래스를 사용하기 전에 반드시 Scanner 객체를 설정하라!
+	 // 이 클래스를 사용하기 전에 반드시 Scanner 객체를 설정하라!
     public static Scanner keyScan;
 
     public static boolean confirm(String message) {
@@ -21,8 +21,3 @@ public class Console {
         return keyScan.nextLine().toLowerCase().split(" ");
     }
 }
-
-
-
-
-

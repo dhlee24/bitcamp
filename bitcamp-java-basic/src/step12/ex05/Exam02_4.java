@@ -1,14 +1,13 @@
-// java.util.LinkedList 사용하기
+// Iterator 사용
 package step12.ex05;
 
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Stack;
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class Exam02_4 {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         String s1 = new String("aaa");
         String s2 = new String("bbb");
         String s3 = new String("ccc");
@@ -23,10 +22,10 @@ public class Exam02_4 {
         queue.add(s5);
         
         Iterator 컬렉션에서값을꺼내주는객체 = queue.iterator();
-		
-		while(컬렉션에서값을꺼내주는객체.hasNext()) {
-			System.out.print(컬렉션에서값을꺼내주는객체.next() + ", ");
-		}
-		System.out.println();
+        while (컬렉션에서값을꺼내주는객체.hasNext()) {
+            System.out.print(컬렉션에서값을꺼내주는객체.next() + ", ");
+        }
+        System.out.println();
+        
     }
 }

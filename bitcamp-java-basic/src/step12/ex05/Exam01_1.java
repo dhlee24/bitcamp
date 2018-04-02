@@ -34,17 +34,21 @@ public class Exam01_1 {
 		// hashCode()의 리턴 값이 같도록 오버라이딩 하였다.
 		// 또한 equals()	의 리턴 값도 true가 되도록 오버라이딩 하였다.
 					 
-		// HashSet()은 값의 중복을 검사할 때 인스턴스의 주소를 비교하지 않고
-		// hashCode()의 리턴 ㄹ값과 equals()의 리턴 값으로 판단한다.
-		// 따라서 v5는 비록 v3와 다른 인스턴스지만 hashCode()의 리턴 값이 두 객체에 
-		print(set);
-	}
-	
-	static void print(HashSet set) {
-		Object[] values = set.toArray();
-		for(Object value : values) {
-			System.out.print(value + ", ");
-		}
-		System.out.println();
-	}
+		 // HashSet은 값의 중복을 검사할 때 인스턴스의 주소를 비교하지 않고
+        // hashCode()의 리턴 값과 equals()의 리턴 값으로 판단한다.
+        // 따라서 v5는 비록 v3와 다른 인스턴스이지만, 
+        // hashCode()의 리턴 값이 같고 두 객체에 대해 equals()를 호출하면 
+        // true가 리턴되기 때문에 같은 값으로 간주하여 중복 저장하지 않는다.
+        // 결론! v5는 추가되지 않는다.
+        
+        print(set);
+    }
+    
+    static void print(HashSet set) {
+        Object[] values = set.toArray();
+        for (Object value : values) {
+            System.out.print(value + ", ");
+        }
+        System.out.println();
+    }
 }

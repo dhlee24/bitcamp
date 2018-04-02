@@ -1,4 +1,4 @@
-// Queue
+// Queue : FIFO
 package step12.ex04;
 
 import step12.ex02.LinkedList;
@@ -9,12 +9,12 @@ import step12.ex02.LinkedList;
 // - 이벤트 처리(이벤트가 발생된 순서대로 처리)
 public class Queue extends LinkedList{
 	// 맨 뒤에 값을 붙인다.
-	public void offer(Object value) {
-		this.add(value);
-	}
-	
-	// 맨 앞의 값을 꺼낸다.
-	public Object poll() {
-		return this.remove(0);
-	}
+    public void offer(Object value) {
+        this.add(value);
+    }
+    
+    // 맨 앞의 값을 꺼낸다.
+    public Object poll() {
+        return this.remove(0);
+    }
 }
